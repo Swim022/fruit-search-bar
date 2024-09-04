@@ -1,0 +1,58 @@
+body {
+    background: linear-gradient(135deg, #a8e6cf 0%, #ffeb3b 100%); /* Soft tropical green to yellow */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Other styles remain unchanged */
+.search-container {
+    width: 300px;
+    position: relative;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.search-container .suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.search-container .suggestions ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.search-container .suggestions ul li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+ul li:hover,
+ul li.highlight {
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.search-container .suggestions ul li:last-child {
+    border-bottom: none;
+}
